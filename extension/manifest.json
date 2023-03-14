@@ -1,0 +1,23 @@
+{
+  "name": "Twitter profile to NetML",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Twitter Profile to NetML scans a twitter profile webpage and summaries key information about the profile in a NetML formatted line of text. The text can easily be copied and pasted into documents where such information is stored, organised and read by programs that can read NetML.",
+  "icons": {
+    "16": "netml_128.png",
+    "32": "netml_128.png",
+    "48": "netml_128.png",
+    "128": "netml_128.png"
+  },
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "netml_128.png"
+  }
+}

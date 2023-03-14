@@ -1,0 +1,52 @@
+<html>
+   <head>
+      <title>TWITTER PROFILE TO NETML</title>
+   </head>
+   <body>
+      <button style="float:right" class="btn" id="close">
+         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <div style="min-width:300px;">
+         <p id="greeting" style="visibility:hidden;"><b>PROFILE ADDED TO STACK AS <a style="color:black" target="_blank" href="https://munnecke.net/blog/introducing-netml/">NETML</a>!</b></p>
+         <p><span id="netml">Works only for twitter profile webpages -> <a target="_blank" href="https://twitter.com/maxmunnecke"> example</a></span> 
+            <a style="visibility:hidden;text-decoration: none;color:rgb(58, 58, 193);cursor:pointer" id="copy">&lt;copy text&gt;</a></p>
+         <div style="width:auto;margin-bottom: 2px;border-bottom: solid 2px;">
+            <p style="display:inline;font-weight:600;">STACK: <span id="counter">0</span> ITEM(S)</p>
+         </div>
+         <button class="btn" id="remove" title="Remove latest item from stack">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+               <path d="M0 0h24v24H0z" fill="none"/>
+               <path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/>
+            </svg>
+         </button>
+         <button class="btn" id="print" title="Copy stack to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+               <path d="M0 0h24v24H0z" fill="none"/>
+               <path d="M19 2h-4.18C14.4.84 13.3 0 12 0c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h2v3h10V4h2v16z"/>
+            </svg>
+         </button>
+         <button class="btn" id="clear"  style="background-color:red" title="Clear stack">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+               <path d="M0 0h24v24H0z" fill="none"/>
+               <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+            </svg>
+         </button>
+      </div>
+   </body>
+   <script src="popup.js"></script>
+   <style>
+      .btn {
+      background-color: rgb(120,120,120);
+      border: none; 
+      color: white; 
+      padding: 6px 6px; 
+      font-size: 12px; 
+      cursor: pointer;
+      }
+      .btn:hover {
+      background-color: rgb(185, 185, 185);
+      }
+   </style>
+</html>
