@@ -5,7 +5,9 @@ The "Twitter profile to NetML" chrome extension scans a twitter profile webpage 
 [NetML](https://munnecke.net/blog/introducing-netml/) is an practical markup language to store network information that is both easily readable to humans and machines. 
 
 The text can easily be copied and pasted into documents where such information is stored, organised and read by programs that can read NetML.
-![](popup.png)
+
+![Screenshot of extension](popup.png)
+
 By default each entry is store in a stack when the extension is pressed while visiting a twitter profile webpage, so that multiple profiles can be processed before copying the text to the clipboard and pasting elsewhere. The stack is syncronized with the same user profile across browser windows and devices.
 
 *Workflow*
