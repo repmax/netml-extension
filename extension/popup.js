@@ -18,9 +18,7 @@ function textToClipboard_wrapper() {
 
 function saveToStack() {
   chrome.storage.sync.get(["twitter2netml"]).then((result) => {
-      //add new entry
       result.twitter2netml[pageHandle] = pageNetml;
-      //store object
       chrome.storage.sync.set({
           twitter2netml: result.twitter2netml
       })
@@ -29,9 +27,7 @@ function saveToStack() {
 
 function removeLatest() {
     chrome.storage.sync.get(["twitter2netml"]).then((result) => {
-        //add new entry
         delete result.twitter2netml[pageHandle];
-        //store object
         chrome.storage.sync.set({
             twitter2netml: result.twitter2netml
         })
@@ -120,8 +116,6 @@ chrome.tabs.query({
             document.getElementById("greeting").style.visibility = "visible";
             document.getElementById("copy").style.visibility = "visible";
             saveToStack();
-        } else {
-            //hide greeting
         }
     });
 });
