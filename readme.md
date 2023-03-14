@@ -14,3 +14,10 @@ By default each entry is stored in a stack when the extension is pressed while v
 - browse twitter profile webpages and press then icon of the "Twitter profile to NetML" chrome extension when you want to save any of them to the stack. If you regret, you can always remove the lastest entry from the stack using the "revert" button.
 - press the "clipboard" button when you are done and want to copy the whole stack of NetML formatted entries to another document.
 - press "clear" to empty the stack.
+
+*How to install*
+1. Save the extension folder on your device.
+2. Go to chrome://extensions/ in your browser.
+3. At the top right, turn on "Developer mode".
+4. Click "Load unpacked".
+5. Find and select the extension folder and the extension is ready to be used.
