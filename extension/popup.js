@@ -64,7 +64,7 @@ const search = () => {
     const userArray = user.split(/\r?\n/);
     result += userArray[0];
     const twitterhandle = userArray[1].substring(1);
-    result += "; x" + twitterhandle;
+    result += "; x" + twitterhandle.charAt(0).toUpperCase() + twitterhandle.slice(1);
     const userDescRaw = document.querySelector("[data-testid=UserDescription]").innerText;
     result += "; " + userDescRaw.replace(/\||\n|\r/g, ' - ').replace(/  |;/g, ' ');
     result += " | tw:" + twitterhandle;
