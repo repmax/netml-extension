@@ -59,19 +59,38 @@ document.getElementById("print").addEventListener('click', printStack);
 document.getElementById("clear").addEventListener('click', clearStack);
 
 const search = () => {
-    var result = "";
+    let result = "";
     const user = document.querySelector("[data-testid=UserName]").innerText;
     const userArray = user.split(/\r?\n/);
     result += userArray[0];
     const twitterhandle = userArray[1].substring(1);
     result += "; x" + twitterhandle.charAt(0).toUpperCase() + twitterhandle.slice(1);
-    const userDescRaw = document.querySelector("[data-testid=UserDescription]").innerText;
-    result += "; " + userDescRaw.replace(/\||\n|\r/g, ' - ').replace(/  |;/g, ' ');
-    result += " | tw:" + twitterhandle;
-    const userUrl = document.querySelector("[data-testid=UserUrl]").innerText;
-    if (userUrl) {
-        result += " ww:" + userUrl;
+    // UserDescription
+    const userDescRaw = document.querySelector("[data-testid=UserDescription]");
+    if(userDescRaw){
+        let userDescRawText = userDescRaw.innerText
+        result += "; " + userDescRawText.replace(/\||\n|\r/g, ' - ').replace(/  |;/g, ' ').replace(/- -/g, '-');
     }
+    // UserProfessionalCategory
+    const proUrl = document.querySelector("[data-testid=UserProfessionalCategory]");
+    if (proUrl) {
+        let catTag = proUrl.innerText;
+        result += " #"+catTag.replace(/[^0-9a-zA-Z]/g,'');
+    }
+    // UserUrl
+    result += " | tw:" + twitterhandle;
+    const userUrl = document.querySelector("[data-testid=UserUrl]");
+    if (userUrl) {
+        result += " ww:" + userUrl.innerText;
+    }
+    // UserLocation
+    const userLoc = document.querySelector("[data-testid=UserLocation]");
+    if (userLoc) {
+        userLocText = userLoc.innerText;
+        result += " lo:" + userLocText.replace(/[^a-zA-Z0-9/-]/g,'_');
+    }
+    // removing accents
+    result = result.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     return {
         handle: twitterhandle,
         netml: result
